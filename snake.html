@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rrrRex-pages.io</title>
+    <style>
+        .aaa {
+            background: linear-gradient(270deg, rgb(0, 255, 174), rgb(65, 144, 255));
+            background-size: 200% 200%;
+            animation: gradientBackground 5s ease infinite;
+        }
+        /* 定义关键帧 */
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #game-board {
+            display: grid;
+            grid-template-rows: repeat(20, 20px);
+            grid-template-columns: repeat(20, 20px);
+            border: 1px solid #000;
+        }
+        .cell {
+            width: 20px;
+            height: 20px;
+        }
+        .snake {
+            background-color: green;
+        }
+        .food {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;" class="aaa">
+        <h1>Rex的休息站</h1>
+        <a href="https://www.bilibili.com/video/BV1UT42167xb" id="bilibili" style="display: none;">点我看看</a>
+        <button onclick="showBilibili()">点我看看</button>
+        <div id="game-board"></div>
+    </div>
+
+    <script>
+        const board = document.getElementById('game-board');
+        const rows = 20;
+        const cols = 20;
+        let snake = [{ x: 10, y: 10 }];
+        let food = { x: 5, y: 5 };
+        let direction = { x: 0, y: 0 };
+        let score = 0;
+
+        function createBoard() {
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < cols; col++) {
+                    const cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    board.appendChild(cell);
+                }
+            }
+        }
+
+        function drawSnake() {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => cell.classList.remove('snake'));
+            snake.forEach(segment => {
+                cells[segment.y * cols + segment.x].classList.add('snake');
+            });
+        }
+
+        function drawFood() {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => cell.classList.remove('food'));
+            cells[food.y * cols + food.x].classList.add('food');
+        }
+
+        function moveSnake() {
+            const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+            snake.unshift(head);
+
+            if (head.x === food.x && head.y === food.y) {
+                score++;
+                generateFood();
+            } else {
+                snake.pop();
+            }
+
+            if (head.x < 0 || head.x >= cols || head.y < 0 || head.y >= rows || isCollision(head)) {
+                alert('游戏结束！得分：' + score);
+                resetGame();
+            }
+        }
+
+        function isCollision(head) {
+            return snake.some((segment, index) => index !== 0 && segment.x === head.x && segment.y === head.y);
+        }
+
+        function generateFood() {
+            food = {
+                x: Math.floor(Math.random() * cols),
+                y: Math.floor(Math.random() * rows)
+            };
+        }
+
+        function resetGame() {
+            snake = [{ x: 10, y: 10 }];
+            direction = { x: 0, y: 0 };
+            score = 0;
+            generateFood();
+        }
+
+        function gameLoop() {
+            moveSnake();
+            drawSnake();
+            drawFood();
+        }
+
+        document.addEventListener('keydown', (event) => {
+            switch (event.key) {
+                case 'ArrowUp':
+                    if (direction.y === 0) direction = { x: 0, y: -1 };
+                    break;
+                case 'ArrowDown':
+                    if (direction.y === 0) direction = { x: 0, y: 1 };
+                    break;
+                case 'ArrowLeft':
+                    if (direction.x === 0) direction = { x: -1, y: 0 };
+                    break;
+                case 'ArrowRight':
+                    if (direction.x === 0) direction = { x: 1, y: 0 };
+                    break;
+            }
+        });
+
+        function showBilibili() {
+            document.getElementById('bilibili').click();
+        }
+
+        createBoard();
+        generateFood();
+        setInterval(gameLoop, 200);
+    </script>
+</body>
+</html>
