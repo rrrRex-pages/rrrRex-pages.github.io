@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏更新内容</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .update-section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu" style="background-color:#ddd;height:1450px;width:200px;float:left;">
+        <a href="24w40a.html">24w40a</a>
+    </div>
+    <div class="update-section">
+        <h2>方块</h2>
+        <ul>
+            <li><strong>苍白橡树树苗</strong>：一种新的树苗，由苍白橡树树叶掉落，也可通过交易获取。与深色橡树树苗一样，单个无法生长，在2×2空间摆放的4个苍白橡树树苗才可生长为苍白橡树。</li>
+            <li><strong>苍白橡树树叶</strong>：随苍白橡树生成的自然方块。</li>
+            <li><strong>苍白橡木原木</strong>：随苍白橡树生成的自然方块。有对应的去皮变种。可以合成对应种类的悬挂式告示牌。</li>
+            <li><strong>苍白橡木</strong>：由4个苍白橡木原木合成。有对应的去皮变种。</li>
+            <li><strong>苍白橡木木板</strong>：一种新的木板。可用于合成对应的按钮、门、栅栏、栅栏门、压力板、告示牌、台阶、楼梯、活板门、船和运输船。</li>
+            <li><strong>苍白苔藓块</strong>：自然生成于苍白之园生物群系中。类似于苔藓块，植物类方块能放置在其上。</li>
+            <li><strong>苍白覆地苔藓</strong>：自然生成于苍白之园生物群系中。放置时，会尝试依附相邻的方块向上延伸至多两格。对其使用骨粉时，会向所有相邻方块的对应面延伸。</li>
+            <li><strong>苍白垂须</strong>：自然生成于苍白之园生物群系中苍白橡树的树叶下方的网状藤蔓。不因随机刻自然生长，但可使用骨粉使其向下生长。在使用剪刀或附有精准采集的工具破坏时掉落对应的方块物品。</li>
+            <li><strong>嘎枝之心</strong>：生成于苍白橡树的树干中，四周均被苍白橡木原木覆盖。如果放置在朝向正确的苍白橡木原木之间，它会在夜晚或雷暴时激活，并在水平16格、竖直8格范围内生成嘎枝。所生成的嘎枝被玩家攻击时会发出指向该方块的粒子效果。被破坏时，所生成的嘎枝会一并被移除。斧是破坏此方块的合适工具，但只有附有精准采集的工具能通过破坏使其掉落对应的方块物品。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>物品</h2>
+        <ul>
+            <li><strong>刷怪蛋</strong>：加入了嘎枝刷怪蛋，所生成的嘎枝（ID为creaking）不会随着昼夜更替或天气变化而消失，能够受伤、穿越传送门。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>生物</h2>
+        <ul>
+            <li><strong>嘎枝</strong>：一种生命值为1（♥）的敌对生物。在玩家视野内时不会移动，除非看着它的所有玩家都戴着雕刻南瓜。不会为船所困。由嘎枝之心生成的嘎枝（ID为creaking_transient）无懈可击，只有在嘎枝之心被摧毁时才会死亡。这种嘎枝不受光照亮度影响，但会随着昼夜更替和天气变化而消失与生成。不能穿越传送门。不会被保存或加载。不能被刷怪蛋或/summon命令生成。由嘎枝刷怪蛋生成的嘎枝（ID为creaking）不具有上述特性，但仍然免疫火焰伤害。灾厄村民会主动远离嘎枝。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>非生物实体</h2>
+        <ul>
+            <li><strong>苍白橡木船</strong>：由苍白橡木木板合成的船变种。</li>
+            <li><strong>苍白橡木运输船</strong>：由苍白橡木木板合成的运输船变种。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>世界生成</h2>
+        <ul>
+            <li><strong>苍白之园</strong>：黑森林的新变种。会自然生成悬有苍白垂须的苍白橡树，地表覆盖着苍白苔藓块或苍白覆地苔藓。动物类生物不会在这里自然生成。拥有独特的、由此生物群系中的方块产生的环境音效。这些音效主要由依附于苍白橡树树叶或原木的苍白垂须和夜间激活的嘎枝之心方块产生。</li>
+            <li><strong>苍白橡树</strong>：自然生成于苍白之园生物群系中的树类地物。树干内可能藏有嘎枝之心。一些树叶下方悬挂着苍白垂须。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>常规</h2>
+        <ul>
+            <li><strong>标签</strong>：加入了方块标签#pale_oak_logs：pale_oak_log、pale_oak_wood、stripped_pale_oak_log和stripped_pale_oak_wood。加入了物品标签#pale_oak_logs：pale_oak_log、pale_oak_wood、stripped_pale_oak_log和stripped_pale_oak_wood。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>修复</h2>
+        <p>修复了29个漏洞，包括但不限于：</p>
+        <ul>
+            <li>MC-64265 — 传送乘客不会使他们脱离骑乘。</li>
+            <li>MC-108323 — 聊天和/title命令中的多段下划线相互交错，导致淡出效果极差。</li>
+            <li>MC-131215 — 无法传送处于船上的实体。</li>
+            <li>MC-185144 — 村民交易UI中，物品耐久条和所有物品渲染异常。</li>
+            <li>MC-259651 — updateSkyBrightness()函数在客户端没有被使用，导致了多个问题。</li>
+            <li>MC-276391 — 将物品悬停到配方书元素上方时，耐久度和收纳袋容量条渲染异常。</li>
+            <li>MC-272946 — 某些方块的轮廓箱几乎不可见。</li>
+            <li>MC-273848 — 1.21中，玩家又能在水下出生。</li>
+            <li>MC-276005 — “文本背景不透明度”辅助功能选项设置值较高时，潜行玩家的名称标签文本被渲染得完全不可见或隐约可见。</li>
+            <li>MC-276852 — 潜影盒能用与其相同颜色的染料染色。</li>
+            <li>MC-275505 — /tp命令强制处于骑乘状态的实体脱离。</li>
+            <li>MC-275706 — 原版客户端不再在配方书中显示定义组件的物品。</li>
+            <li>MC-275790 — 某些标签中的非必要项在不存在时导致验证错误。</li>
+        </ul>
+    </div>
+    <div style="in_the_middle">
+        <a href="24w40a.html">返回24w40a</a>
+    </div>
+</body>
+</html>

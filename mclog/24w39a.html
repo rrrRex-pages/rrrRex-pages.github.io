@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏更新内容</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .update-section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu" style="background-color:#ddd;height:1120px;width:200px;float:left;">
+        <a href="24w40a.html" font-size="20px"></a>24w40a</a>
+        <a href="24w38a.html" font-size="20px"></a>24w38a</a>
+    </div>
+    <div class="update-section">
+        <h2>新内容</h2>
+        <h3>常规</h3>
+        <ul>
+            <li><strong>标签</strong>：加入了物品标签#map_invisibility_equipment：carved_pumpkin。能被装备以隐藏在其他玩家地图上的玩家标记的物品。</li>
+            <li><strong>实体类型标签</strong>：加入了实体类型标签#boat：oak_boat、spruce_boat、birch_boat、jungle_boat、acacia_boat、cherry_boat、dark_oak_boat、mangrove_boat和bamboo_raft。用于husbandry/ride_a_boat_with_a_goat.json进度文件。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>更改</h2>
+        <h3>方块</h3>
+        <ul>
+            <li><strong>容器</strong>：方块实体数据Lock现在被重命名为lock，其内容现在是一个物品谓词。任意匹配此谓词的物品都能打开此容器。</li>
+        </ul>
+        <h3>物品</h3>
+        <ul>
+            <li><strong>收纳袋</strong>：不再属于实验性内容。</li>
+            <li><strong>地图</strong>：在头部装备雕刻南瓜的玩家不再会在其他玩家的地图上显示玩家标记。具体物品可通过新加入的物品标签#map_invisibility_equipment修改。</li>
+        </ul>
+        <h3>生物</h3>
+        <ul>
+            <li><strong>溺尸</strong>：现在增援溺尸只能在有足够空间的液体中生成。</li>
+            <li><strong>生物转化</strong>：发生僵尸变种与僵尸变种之间的生物转化时，CanBreakDoors标签也会被继承。</li>
+        </ul>
+        <h3>非生物实体</h3>
+        <ul>
+            <li><strong>船和运输船</strong>：拆分了每种船和运输船的实体类型ID，因此移除了Type字段。加入了多种新的船和运输船类型。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>游戏内容</h2>
+        <h3>物品栏</h3>
+        <p>更新了GUI槽位高亮，以提高物品纹理的可见度。旧版本纹理已添加到Programmer Art资源包中。</p>
+    </div>
+
+    <div class="update-section">
+        <h2>常规</h2>
+        <ul>
+            <li><strong>数据包</strong>：将数据包版本号更改为55。移除了bundle实验性数据包和功能开关。</li>
+            <li><strong>物品堆叠组件</strong>：lock组件现在是一个物品谓词。</li>
+            <li><strong>实体子谓词</strong>：移除了boat实体子谓词。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>修复</h2>
+        <p>修复了21个漏洞，包括但不限于：</p>
+        <ul>
+            <li>MC-219083 — 和平模式下关闭生命值自然恢复时，客户端/服务端的饥饿系统失去同步。</li>
+            <li>MC-275216 — 给狼喂食兔肉煲时，碗也会被消耗。</li>
+            <li>MC-275544 — 溺尸不再召唤增援。</li>
+            <li>MC-276305 — 未启用功能开关时，收纳袋不再可用。</li>
+            <li>MC-276341 — 在火中不再增加剩余着火时间。</li>
+            <!-- 此处省略了其他漏洞的描述，因为内容较多 -->
+        </ul>
+    </div>
+    <div style="in_the_middle">
+        <a href="rex-pages.cn/mclog/index.html"
+    </div>
+</body>
+</html>

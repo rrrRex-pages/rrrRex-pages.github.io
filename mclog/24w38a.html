@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏更新内容</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .update-section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="update-section">
+        <h2>常规</h2>
+        <h3>语言</h3>
+        <p>加入了对高地挪威语的支持。</p>
+        <h3>标签</h3>
+        <ul>
+            <li>加入了#shulker_boxes物品标签，包括所有潜影盒物品。</li>
+        </ul>
+        <h3>配方</h3>
+        <p>加入了配方类型crafting_transmute。此配方的输出物品会保留输入物品的所有序列化堆叠组件，只改变物品类型。</p>
+    </div>
+
+    <div class="update-section">
+        <h2>更改</h2>
+        <h3>方块</h3>
+        <ul>
+            <li>红石火把、红石中继器和红石比较器：更新了模型和UV映射。模型中出现在红石火把后面的“光芒”现不再使用负尺寸的模型元素，而改为使用6个单面的模型元素实现相同效果。</li>
+        </ul>
+        <h3>非生物实体</h3>
+        <ul>
+            <li>物品（实体）：物品实体现在只会在生命值为0时每10游戏刻（0.5秒）播放一次着火音效。</li>
+        </ul>
+        <h3>游戏内容</h3>
+        <ul>
+            <li>配方书：潜影盒物品染色配方现在会在配方书中显示。</li>
+            <li>创造模式物品栏：现在持续丢弃物品的速度会逐渐限制到每20游戏刻（1秒）丢出1物品。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>常规</h2>
+        <ul>
+            <li>数据包：将数据包版本号更改为54。</li>
+            <li>资源包：将资源包版本号更改为39。</li>
+            <li>Realms：现在拥有完整的创建新的世界屏幕，包括自定义游戏规则和数据包。现在可以在世界创建屏幕中创建极限模式世界。</li>
+            <li>移除了配方类型crafting_special_shulkerboxcoloring。</li>
+            <li>移除了用于客户端一侧忽略连接错误的临时选项strictErrorHandling。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>新内容（实验性）</h2>
+        <ul>
+            <li>物品：收纳袋加入了16种染色收纳袋。与潜影盒不同，装有水的炼药锅无法洗去染色收纳袋上的颜色。</li>
+        </ul>
+    </div>
+
+    <div class="update-section">
+        <h2>修复</h2>
+        <p>修复了23个漏洞，包括但不限于：</p>
+        <ul>
+            <li>MC-13246 — 尝试修复、合并或重命名特定的附魔物品前，铁砧会显示“过于昂贵”信息。</li>
+            <li>MC-134626 — 鱿鱼和发光鱿鱼会在气泡柱中上蹿下跳，传上高空。</li>
+            <li>MC-164258 — 点击配方书搜索图标时，搜索栏不会被选中。</li>
+            <li>MC-169660 — 不含<targets>的/teleport能改变实体的朝向。</li>
+            <li>MC-204050 — 射中紫水晶块的字幕为“方块：损坏中”。</li>
+            <li>MC-216016 — 向水晶声方块发射烟花火箭会发出损坏声音。</li>
+            <li>MC-225060 — 实体燃烧音效每刻重复。</li>
+            <li>MC-225417 — 鱿鱼和发光鱿鱼被攻击时能挣脱拴绳。</li>
+            <li>MC-228070 — 方块中渲染的名称标签的字符在某些角度上更亮。</li>
+            <!-- 此处省略了其他漏洞的描述，因为内容较多 -->
+        </ul>
+    </div>
+    <div style="in_the_middle">
+        <a href="www.rex-pages.cn/mclog/index.html">返回首页</a>
+    </div>
+</body>
+</html>
